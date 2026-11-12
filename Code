@@ -1,0 +1,61 @@
+### 2. C++ Source Code (`practical_01.cpp`)
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    // 1. Declare constants and variables of various data types
+    const double TAX_RATE = 0.05; // 5% tax rate constant
+    
+    string itemName;
+    int quantity = 0;
+    double unitPrice = 0.0;
+    
+    cout << "========================================\n";
+    cout << "     RSSOFTTECS - C++ FUNDAMENTALS DEMO \n";
+    cout << "========================================\n\n";
+
+    // 2. Accept input from the user
+    cout << "Enter item name: ";
+    getline(cin, itemName);
+
+    cout << "Enter quantity: ";
+    cin >> quantity;
+
+    cout << "Enter unit price (in INR): ";
+    cin >> unitPrice;
+
+    // 3. Demonstrate Arithmetic Operators
+    double subtotal = quantity * unitPrice;
+    double taxAmount = subtotal * TAX_RATE;
+    double grandTotal = subtotal + taxAmount;
+
+    // 4. Demonstrate Relational and Logical Operators
+    // Check if the order qualifies for free shipping (quantity >= 5 AND subtotal >= 500)
+    bool qualifiesForFreeShipping = (quantity >= 5) && (subtotal >= 500.0);
+
+    // 5. Display the input and calculated results clearly
+    cout << "\n----------------------------------------\n";
+    cout << "            BILLING SUMMARY             \n";
+    cout << "----------------------------------------\n";
+    cout << fixed << setprecision(2);
+    cout << "Item Name         : " << itemName << "\n";
+    cout << "Quantity          : " << quantity << "\n";
+    cout << "Unit Price        : INR " << unitPrice << "\n";
+    cout << "----------------------------------------\n";
+    cout << "Subtotal          : INR " << subtotal << "\n";
+    cout << "Tax (5%)          : INR " << taxAmount << "\n";
+    cout << "Grand Total       : INR " << grandTotal << "\n";
+    cout << "----------------------------------------\n";
+    
+    // Relational/Logical output
+    cout << "Free Shipping     : " 
+         << (qualifiesForFreeShipping ? "QUALIFIED (Free)" : "NOT QUALIFIED") 
+         << "\n";
+    cout << "========================================\n";
+
+    return 0;
+}
