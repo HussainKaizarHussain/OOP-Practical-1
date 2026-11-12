@@ -1,0 +1,17 @@
+Enter item name: Wireless Mouse
+Enter quantity: 6
+Enter unit price (in INR): 450.00
+
+----------------------------------------
+            BILLING SUMMARY             
+----------------------------------------
+Item Name         : Wireless Mouse
+Quantity          : 6
+Unit Price        : INR 450.00
+----------------------------------------
+Subtotal          : INR 2700.00
+Tax (5%)          : INR 135.00
+Grand Total       : INR 2835.00
+----------------------------------------
+Free Shipping     : QUALIFIED (Free)
+========================================
